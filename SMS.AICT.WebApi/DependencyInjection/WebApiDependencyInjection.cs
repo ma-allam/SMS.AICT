@@ -30,7 +30,7 @@ namespace SMS.AICT.WebApi.DependencyInjection
         }
         private static void AddDataBase(IServiceCollection services)
         {
-            services.AddDbContext<DatabaseService>(opt => opt.UseSqlServer(SettingsDependancyInjection.SqlSettings.ConnectionString!));
+            services.AddDbContext<DatabaseService>(opt => opt.UseNpgsql(SettingsDependancyInjection.PosSettings.ConnectionString!));
             services.AddScoped<IDataBaseService, DatabaseService>();
         }
 

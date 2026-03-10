@@ -11,10 +11,14 @@ namespace SMS.AICT.Core.AppSetting
     public static class SettingsDependancyInjection
     {
         public static SqlAppSetting SqlSettings { get; } = new();
+        public static PosAppSetting PosSettings { get; } = new();
+
         public static void Init(IConfiguration configuration)
         {
             var sqlSection = configuration.GetSection(SqlAppSetting.SectionName);
             sqlSection.Bind(SqlSettings);
+            var posSection = configuration.GetSection(PosAppSetting.SectionName);
+            posSection.Bind(PosSettings);
         }
         public static void AddSettingsDependancyInjection(this IServiceCollection services, IConfiguration configuration)
         {
