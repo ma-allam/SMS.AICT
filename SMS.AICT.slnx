@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="SMS.AICT.Application/SMS.AICT.Application.csproj" />
+  <Project Path="SMS.AICT.Core/SMS.AICT.Core.csproj" />
+  <Project Path="SMS.AICT.Domain/SMS.AICT.Domain.csproj" />
+  <Project Path="SMS.AICT.Infrastructure/SMS.AICT.Infrastructure.csproj" />
+  <Project Path="SMS.AICT.Persistence/SMS.AICT.Persistence.csproj" />
+  <Project Path="SMS.AICT.WebApi/SMS.AICT.WebApi.csproj" />
+</Solution>

@@ -1,0 +1,21 @@
+﻿using MediatR;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using SMS.AICT.Application.AppContracts;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SMS.AICT.Application.DependencyInjection
+{
+    public static class DependencyInjection
+    {
+        public static void AddApplicationDependencyInjection(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(IMediatorImplementor).Assembly));
+        }
+    }
+}
