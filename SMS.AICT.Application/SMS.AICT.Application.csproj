@@ -18,8 +18,4 @@
     <ProjectReference Include="..\SMS.AICT.Domain\SMS.AICT.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Business\" />
-  </ItemGroup>
-
 </Project>
